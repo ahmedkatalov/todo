@@ -10,9 +10,9 @@ export class Flex {
         const form = document.querySelector(".todo-container");
         this.side = new Sidebar();
 
-        this.todos = localStore.getDataFromStore() || [];  // Загружаем задачи из localStorage или создаем пустой массив
+        this.todos = localStore.getDataFromStore() || [];  
         
-        // Устанавливаем flexInstance для всех загруженных задач
+        
         this.todos.forEach(todo => todo.flexInstance = this);
 
         this.todoListElement = document.getElementById('todo-list');
@@ -22,17 +22,17 @@ export class Flex {
         this.div.append(this.side.render());
         this.div.append(this.todoListElement, form);
 
-        this.renderTodos();  // Рендер задач при инициализации
+        this.renderTodos();  
     }
 
     removeTodo(todoId) {
-        // Фильтруем задачи и исключаем ту, которую хотим удалить
+        
         this.todos = this.todos.filter(todo => todo.id !== todoId);
         
-        // Перерисовываем список задач
+        
         this.renderTodos();
         
-        // Сохраняем обновленный список задач в локальное хранилище
+       
         localStore.saveDataToStore(this.todos); 
     }
     
@@ -43,7 +43,7 @@ export class Flex {
         const descriptionInput = document.getElementById('todo-description');
 
         const newTodo = new Todo(titleInput.value, descriptionInput.value);
-        newTodo.flexInstance = this;  // Устанавливаем ссылку на текущий экземпляр Flex
+        newTodo.flexInstance = this; 
 
         this.todos.push(newTodo);
         this.renderTodos();
@@ -51,7 +51,7 @@ export class Flex {
         titleInput.value = '';
         descriptionInput.value = '';
 
-        localStore.saveDataToStore(this.todos);  // Сохраняем состояние задач
+        localStore.saveDataToStore(this.todos);  
     }
 
     renderTodos() {
