@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none; /* Убираем стандартную рамку при фокусе */
+  border: 1px solid rgb(146, 146, 146); /* Устанавливаем желаемый стиль рамки */
+}
+
+.header {
+  height: 80px;
+  max-width: 100%;
+  background-color: #f5f5f5;
+  /* Удаляем нижнюю границу у хедера */
+  /* border-bottom: 1px solid #ccc; */
+  text-align: center;
+}
+.header h1 {
+  color: #ff820e;
+}
+span {
+  color: #e93636;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f5f5f5;
+  position: relative;
+  height: 100vh;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.userInput {
+  height: 30px;
+  border: 1px solid rgb(223, 221, 221);
+}
+.userInput:active {
+  border: none;
+}
+
+.add-user {
+  height: 30px;
+  padding: 3px;
+  background-color: #ff820e;
+  border: 0cap;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.addUser h3 {
+  color: rgb(253, 128, 12);
+  margin-left: 4px;
+}
+.addUser {
+  cursor: pointer;
+  display: flex;
+  transition: all 0.3s;
+}
+
+.addUser:hover {
+  background-color: rgb(255, 251, 244);
+}
+
+img {
+  height: 25px;
+  width: 25px;
+}
+
+.userFlex {
+  display: flex;
+}
+
+.userInputBlock h3 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 5px;
+}
+
+.todoButton {
+  margin-bottom: 20px;
+  background-color: #ff820e;
+  border: 0cap;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+  height: 30px;
+  padding: 3px;
+}
+.flex{
+    display: flex;
+}
+
+
+#todo-list {
+    margin: 30px;
+    max-width: 900px;
+}
+
+
+.todo{
+    margin-bottom: 30px;
+} 
+
+
+.remove-button{
+    margin-left: 29px;
+    width: 70px;
+    padding: 3px;
+    border: 0cap;
+    cursor: pointer;
+    background-color: #ff820e;
+    color: #ffffff;
+}
+
+small{
+    margin-left: 20px;
+}
+
+.todo h3 {
+    margin-bottom: 5px;
+}
+
+.todo p {
+    margin-bottom: 20px;
+}
+
+.container{
+    
+}
+
+
+
+
+
+#todo-title{
+    width: 100px;
+   
+    border: 1px solid rgb(255, 125, 18);
+}
+input{
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#todo-description{
+    max-width: 200px;
+    border: 1px solid rgb(255, 125, 18);
+}
+
+
+.todo-container {
+    margin: 20px auto;
+    height: 90px;
+    display: none;
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Чтобы у дочерних элементов был доступ к относительному позиционированию */
+}
+.todo-container button {
+    padding: 3px;
+    border: 0cap;
+    background-color: #ff820e;
+    color: #fff;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#todo-list {
+    margin-bottom: 20px;
+    
+}
+
+.floating-form {
+    position: fixed; /* Фиксируем форму на экране */
+    top: 50%; /* Позиционируем по центру экрана */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем форму */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Поднимаем форму поверх других элементов */
+}
+
+.floating-form input,
+.floating-form button {
+    width: 100%; /* Ширина на всю форму */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Для учета padding в ширине */
+}
+
+.floating-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.floating-form button:hover {
+    background-color: #0056b3; /* Более темный цвет при наведении */
+}
+
+
+.completed{
+    padding: 3px;
+   background-color: #525151;
+    
+}
